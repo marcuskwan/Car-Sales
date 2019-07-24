@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const Header = ({ image, name, price }) => {
-  return (s
+  return (
     <>
       <figure className="image is-128x128">
         <img src={image} alt={name} />
