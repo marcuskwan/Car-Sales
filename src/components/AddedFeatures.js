@@ -8,8 +8,8 @@ const AddedFeatures = ({ features, removeFeature }) => {
       <h6>Added features:</h6>
       {features.length ? (
         <ol type="1">
-          {features.map(feature => (
-            <AddedFeature key={feature.id} feature={feature} removeFeature={removeFeature}/>
+          {features.map((feature, index) => (
+            <AddedFeature key={index} feature={feature} />
           ))}
         </ol>
       ) : (

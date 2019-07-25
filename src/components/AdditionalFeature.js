@@ -1,6 +1,14 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
-const AdditionalFeature = ({ feature, addFeature }) => {
+import { ADD_FEATURE, REMOVE_FEATURE } from "../reducer";
+
+const AdditionalFeature = ({ feature }) => {
+  const dispatch = useDispatch();
+  const addFeature = feature => {
+    // dispatch an action here to add an item
+    dispatch({ type: ADD_FEATURE, payload: feature });
+  };
   const handleAdd = (event, newFeature) => {
     event.preventDefault();
     addFeature(newFeature);
