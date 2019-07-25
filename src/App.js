@@ -13,7 +13,7 @@ const App = ({ features, image, name, price, store, additionalPrice }) => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header image={image} name={name} price={price} />
+        <Header image={image} name={name} price={price} additionalPrice={additionalPrice}/>
         <AddedFeatures features={features}/>
       </div>
       <div className="box">

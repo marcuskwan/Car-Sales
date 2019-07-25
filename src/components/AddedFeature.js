@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 //import action names
-import { REMOVE_FEATURE } from "./reducer";
+import { REMOVE_FEATURE } from "../reducer";
 
-const AddedFeature = ({ feature, removeFeature }) => {
+const AddedFeature = ({ feature }) => {
   const dispatch = useDispatch();
   const removeFeature = feature => {
     // dispatch an action here to remove an item

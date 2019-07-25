@@ -35,6 +35,7 @@ export const reducer = (state = initialState, action) => {
       const featureToRemove = action.payload;
       return {
         ...state,
+        additionalPrice: state.additionalPrice - featureToRemove.price,
         car: {
           ...state.car,
           features: state.car.features.filter(
@@ -42,7 +43,7 @@ export const reducer = (state = initialState, action) => {
           ),
         },
         // store: state.store.filter(feature => feature !== featureToRemove),
-        store: [...state.store, featureToRemove]
+        store: [...state.store, featureToRemove],
       };
     default:
       return state;

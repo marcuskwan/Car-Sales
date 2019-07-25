@@ -1,15 +1,15 @@
 import React from "react";
 
-const Header = ({ image, name, price }) => {
+const Header = ({ image, name, price, additionalPrice }) => {
   return (
     <>
       <figure className="image is-128x128">
         <img src={image} alt={name} />
       </figure>
       <h2>{name}</h2>
-      <p>Amount: ${price}</p>
+      <p>Amount: ${price + additionalPrice}</p>
     </>
   );
 };
 
-export default Header
+export default Header;
