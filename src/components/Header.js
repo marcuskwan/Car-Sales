@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const Header = props => {
+const Header = ({ image, name, price, additionalPrice }) => {
   return (
     <>
       <figure className="image is-128x128">
-        <img src={props.car.image} alt={props.car.name} />
+        <img src={image} alt={name} />
       </figure>
-      <h2>{props.car.name}</h2>
-      <p>Amount: ${props.car.price}</p>
+      <h2>{name}</h2>
+      <p>Amount: ${price + additionalPrice}</p>
     </>
   );
 };

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Total = props => {
+const Total = ({ price, additionalPrice }) => {
   return (
     <div className="content">
-      <h4>Total Amount: ${props.car.price + props.additionalPrice}</h4>
+      <h4>Total Amount: ${price + additionalPrice}</h4>
     </div>
   );
 };
